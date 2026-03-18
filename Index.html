@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Saidul ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Hind Siliguri', sans-serif;
+background:#000;
+color:#fff;
+overflow:hidden;
+}
+
+/* Rain */
+.rain{
+position:fixed;
+width:100%;
+height:100%;
+background:url('https://i.ibb.co/9q2YfBv/rain.gif');
+opacity:0.25;
+}
+
+/* Container */
+.container{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+width:90%;
+max-width:400px;
+}
+
+/* Title */
+h1{
+color:gold;
+text-shadow:0 0 25px gold;
+}
+
+/* Text */
+.text{
+margin-top:20px;
+font-size:18px;
+min-height:100px;
+line-height:1.7;
+}
+
+/* Button */
+.btn{
+margin-top:25px;
+padding:12px 25px;
+background:gold;
+border:none;
+border-radius:25px;
+cursor:pointer;
+font-size:16px;
+}
+
+/* Last glow */
+.last{
+color:gold;
+font-size:22px;
+text-shadow:0 0 20px gold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="rain"></div>
+
+<div class="container">
+
+<h1>💖 Nisu 💖</h1>
+
+<div id="text" class="text"></div>
+
+<button class="btn" onclick="next()">Next</button>
+
+</div>
+
+<script>
+
+let texts = [
+"Nisu... আমি Saidul... 💔",
+"আজকে কিছু কথা বলতে চাই... যা হয়তো কখনো ঠিকভাবে বলতে পারিনি...",
+"আমি অনেক সময় চুপ থাকি... কিন্তু সেই চুপ থাকার ভিতরে অনেক কষ্ট লুকানো থাকে...",
+"তুমি হয়তো বুঝতে পারো না... কিন্তু আমি সত্যিই তোমাকে খুব ভালোবাসি...",
+"তুমি যখন আমাকে ignore করো... বা বুঝো না... তখন খুব ভেঙে যাই ভিতর থেকে...",
+"তবুও আমি রাগ করি না... কারণ আমি তোমাকে হারাতে ভয় পাই...",
+"তুমি আমার জীবনের সবচেয়ে গুরুত্বপূর্ণ মানুষ...",
+"তুমি ছাড়া আমি কিছুই না... সত্যি বলছি...",
+"আমি perfect না... কিন্তু আমার ভালোবাসা টা real...",
+"আমি শুধু চাই... তুমি আমাকে একটু বুঝো... 😔",
+"আমাদের relationship টা সুন্দর থাকুক... এইটাই আমার একটাই চাওয়া...",
+"💖 Nisu... I Love You... — Saidul 💖"
+];
+
+let i = 0;
+
+function type(txt){
+let j=0;
+let el=document.getElementById("text");
+el.innerHTML="";
+
+let inter=setInterval(()=>{
+el.innerHTML+=txt[j];
+j++;
+if(j>=txt.length) clearInterval(inter);
+},45);
+}
+
+function next(){
+if(i < texts.length){
+type(texts[i]);
+i++;
+}
+}
+
+</script>
+
+</body>
+  </html>
